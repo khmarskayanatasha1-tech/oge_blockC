@@ -48,23 +48,16 @@ body::before {
   pointer-events: none;
   z-index: 0;
   background-image:
-    /* Ярко-красный паттерн с чёрными точками */
-    radial-gradient(circle at 10px 10px, #1A1A1A 2px, transparent 3px),
-    radial-gradient(circle at 30px 30px, #1A1A1A 2px, transparent 3px),
     /* Изумрудный паттерн с чёрными ромбами */
     linear-gradient(45deg, #1A1A1A 3px, transparent 3px),
     linear-gradient(-45deg, #1A1A1A 3px, transparent 3px),
-    /* Старые розовые точки (мягкий фон) */
-    radial-gradient(circle at 20px 20px, rgba(230, 57, 70, 0.05) 1px, transparent 2px);
+    /* Мягкие розовые точки */
+    radial-gradient(circle at 20px 20px, rgba(230, 57, 70, 0.08) 1px, transparent 2px);
   background-size:
-    40px 40px,   /* красные точки */
-    40px 40px,   /* красные точки (смещение) */
-    60px 60px,   /* ромбы */
-    60px 60px,   /* ромбы */
-    80px 80px;   /* старые точки */
+    60px 60px,
+    60px 60px,
+    80px 80px;
   background-position:
-    0 0,
-    20px 20px,
     0 0,
     30px 30px,
     0 0;
@@ -2172,19 +2165,21 @@ header p {
     .gradable-table tr:hover td { background: #F5F9FF; }
 
   /* 👇 НОВЫЙ СТИЛЬ — ЦВЕТНЫЕ ПЯТНА НА ФОНЕ 👇 */
-  .bg-color-blobs {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background-image:
-      radial-gradient(circle at 5% 15%, rgba(230, 57, 70, 0.35) 0%, transparent 18%),
-      radial-gradient(circle at 92% 25%, rgba(16, 185, 129, 0.30) 0%, transparent 20%),
-      radial-gradient(circle at 8% 75%, rgba(16, 185, 129, 0.30) 0%, transparent 18%),
-      radial-gradient(circle at 90% 85%, rgba(230, 57, 70, 0.32) 0%, transparent 20%),
-      radial-gradient(circle at 50% 5%, rgba(16, 185, 129, 0.20) 0%, transparent 25%),
-      radial-gradient(circle at 50% 98%, rgba(230, 57, 70, 0.20) 0%, transparent 25%);
-  }
+.bg-color-blobs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(circle at 5% 15%, rgba(255, 20, 40, 0.95) 0%, rgba(255, 20, 40, 0.5) 12%, transparent 25%),
+    radial-gradient(circle at 92% 25%, rgba(0, 220, 130, 0.90) 0%, rgba(0, 220, 130, 0.45) 12%, transparent 25%),
+    radial-gradient(circle at 8% 75%, rgba(0, 220, 130, 0.90) 0%, rgba(0, 220, 130, 0.45) 12%, transparent 25%),
+    radial-gradient(circle at 90% 85%, rgba(255, 20, 40, 0.92) 0%, rgba(255, 20, 40, 0.48) 12%, transparent 25%),
+    radial-gradient(circle at 50% 5%, rgba(0, 220, 130, 0.75) 0%, rgba(0, 220, 130, 0.35) 15%, transparent 30%),
+    radial-gradient(circle at 50% 98%, rgba(255, 20, 40, 0.75) 0%, rgba(255, 20, 40, 0.35) 15%, transparent 30%),
+    radial-gradient(circle at 20% 50%, rgba(255, 20, 40, 0.55) 0%, transparent 20%),
+    radial-gradient(circle at 80% 50%, rgba(0, 220, 130, 0.55) 0%, transparent 20%);
+}
 </style>
 </head>
 <body>
