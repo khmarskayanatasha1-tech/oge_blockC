@@ -33,7 +33,12 @@
 html, body {
   font-family: 'Nunito', 'Open Sans', sans-serif;
   color: var(--text);
-  background: linear-gradient(135deg, #FFE4E1 0%, #E6E6FA 50%, #D6EAF8 100%);
+  background:
+    radial-gradient(circle at 0% 0%, #FF1428 0%, transparent 45%),
+    radial-gradient(circle at 100% 0%, #00DC82 0%, transparent 45%),
+    radial-gradient(circle at 0% 100%, #00DC82 0%, transparent 45%),
+    radial-gradient(circle at 100% 100%, #FF1428 0%, transparent 45%),
+    linear-gradient(135deg, #FF1428 0%, #00DC82 50%, #FF1428 100%);
   min-height: 100vh;
   padding: 20px;
   position: relative;
@@ -48,20 +53,20 @@ body::before {
   pointer-events: none;
   z-index: 0;
   background-image:
-    /* Изумрудный паттерн с чёрными ромбами */
-    linear-gradient(45deg, #1A1A1A 3px, transparent 3px),
-    linear-gradient(-45deg, #1A1A1A 3px, transparent 3px),
-    /* Мягкие розовые точки */
-    radial-gradient(circle at 20px 20px, rgba(230, 57, 70, 0.08) 1px, transparent 2px);
+    /* Ромбы чёрные (на красном фоне будут выглядеть ярко) */
+    linear-gradient(45deg, rgba(0, 0, 0, 0.45) 3px, transparent 3px),
+    linear-gradient(-45deg, rgba(0, 0, 0, 0.45) 3px, transparent 3px),
+    /* Красные точки Леди Баг */
+    radial-gradient(circle at 20px 20px, rgba(255, 255, 255, 0.35) 3px, transparent 4px);
   background-size:
     60px 60px,
     60px 60px,
-    80px 80px;
+    40px 40px;
   background-position:
     0 0,
     30px 30px,
     0 0;
-  opacity: 0.35;
+  opacity: 1;
 }
 
 body::after {
@@ -89,7 +94,7 @@ body::after {
   background: #FFFFFF;
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(230, 57, 70, 0.2), 0 8px 25px rgba(93, 173, 226, 0.15);
+  box-shadow: 0 20px 60px rgba(230, 57, 70, 0.4), 0 8px 25px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 1;
 }
@@ -2171,14 +2176,12 @@ header p {
   pointer-events: none;
   z-index: 0;
   background-image:
-    radial-gradient(circle at 5% 15%, rgba(255, 20, 40, 0.95) 0%, rgba(255, 20, 40, 0.5) 12%, transparent 25%),
-    radial-gradient(circle at 92% 25%, rgba(0, 220, 130, 0.90) 0%, rgba(0, 220, 130, 0.45) 12%, transparent 25%),
-    radial-gradient(circle at 8% 75%, rgba(0, 220, 130, 0.90) 0%, rgba(0, 220, 130, 0.45) 12%, transparent 25%),
-    radial-gradient(circle at 90% 85%, rgba(255, 20, 40, 0.92) 0%, rgba(255, 20, 40, 0.48) 12%, transparent 25%),
-    radial-gradient(circle at 50% 5%, rgba(0, 220, 130, 0.75) 0%, rgba(0, 220, 130, 0.35) 15%, transparent 30%),
-    radial-gradient(circle at 50% 98%, rgba(255, 20, 40, 0.75) 0%, rgba(255, 20, 40, 0.35) 15%, transparent 30%),
-    radial-gradient(circle at 20% 50%, rgba(255, 20, 40, 0.55) 0%, transparent 20%),
-    radial-gradient(circle at 80% 50%, rgba(0, 220, 130, 0.55) 0%, transparent 20%);
+    radial-gradient(circle at 3% 12%, rgba(255, 0, 30, 0.95) 0%, rgba(255, 0, 30, 0.6) 15%, transparent 30%),
+    radial-gradient(circle at 97% 20%, rgba(0, 230, 130, 0.95) 0%, rgba(0, 230, 130, 0.6) 15%, transparent 30%),
+    radial-gradient(circle at 5% 80%, rgba(0, 230, 130, 0.95) 0%, rgba(0, 230, 130, 0.6) 15%, transparent 30%),
+    radial-gradient(circle at 95% 88%, rgba(255, 0, 30, 0.95) 0%, rgba(255, 0, 30, 0.6) 15%, transparent 30%),
+    radial-gradient(circle at 50% 0%, rgba(0, 230, 130, 0.85) 0%, transparent 35%),
+    radial-gradient(circle at 50% 100%, rgba(255, 0, 30, 0.85) 0%, transparent 35%);
 }
 </style>
 </head>
